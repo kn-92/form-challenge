@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-// import newsReducer from "./formSlice";
+import formReducer from "./formSlice";
 
 export const store = configureStore({
   reducer: {
-    // news: newsReducer,
+    form: formReducer,
   },
 });
 
