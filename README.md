@@ -1,6 +1,8 @@
 npm version - 9.6.2
 node version - 16.13.2
 
+The app is a form which is sending POST request with data to a server and displays errors component if there is any error with communication with api.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

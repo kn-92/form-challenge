@@ -7,7 +7,6 @@ import { useAppSelector } from "./redux/hooks";
 
 function App() {
   const error = useAppSelector((state) => state.form.error);
-  console.log(error);
   return (
     <div className="App">
       <Form />

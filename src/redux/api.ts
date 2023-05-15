@@ -11,7 +11,6 @@ export const postDish = createAsyncThunk(
     const URL = `https://umzzcc503l.execute-api.us-west-2.amazonaws.com/dishes/`;
     try {
       const response = await axios.post(URL, data);
-      console.log(response);
       return response.data;
     } catch (error) {
       return thunkApi.rejectWithValue(error);

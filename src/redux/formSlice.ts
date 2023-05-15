@@ -3,8 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 //type
 import { State } from "./types";
 
-//extraReducer
-import { postDish } from "./extraReducers";
+//api
+import { postDish } from "./api";
 
 const initialState: State = {
   loading: false,

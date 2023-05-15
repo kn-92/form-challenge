@@ -21,24 +21,82 @@
     -webkit-box-shadow: 0px 4px 7px 2px rgba(66, 68, 90, 1);
     -moz-box-shadow: 0px 4px 7px 2px rgba(66, 68, 90, 1);
     box-shadow: 0px 4px 7px 2px rgba(66, 68, 90, 1);
-    .titleLabel {
+    .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 20%;
+        width: 100%;
         font-weight: 700;
-        font-size: 150%;
+        font-size: 25px;
+        margin-bottom: 5%;
     }
-    .input {
-        
-    }
-    .additionalInput {
-        opacity: 1;
-        @include inputAnimation(showAnimation) {
-            from{opacity: 0}
-            to{opacity: 1}
+    .inputsContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        .input {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            width: 30%;
+            border: none;
+            background-color: transparent;
+            border-bottom: 2px solid black;
+            
         }
-        @include animate(showAnimation, 1.5s , ease );
+        .time {
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .selectContainer {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            width: 30%;
+            .selectBox {
+                width: 100%;
+                border: none;
+                padding: 10px 30px 10px 15px;
+                color: white;
+                font-weight: bold;
+                background-color: black;
+                border-radius: 2px;
+
+            }
+        }
+        .additionalInput {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 30%;
+        scale: 1;
+        border: none;
+        background-color: transparent;
+        border-bottom: 2px solid black;
+        @include inputAnimation(showAnimation) {
+            from{ scale: 0}
+            to{ scale: 1}
+        }
+        
+        @include animate(showAnimation, 0.5s , ease );
+        }
     }
     .formErrorMessage {
         color: red;
         font-size: 12px;
+    }
+    .submitButton {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border: none;
+        width: 25%;
+        color: white;
+        font-weight: bold;
+        background-color: black;
+        border-radius: 2px;
+        
     }
 }
 
